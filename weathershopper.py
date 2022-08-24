@@ -27,10 +27,10 @@ least_price_item = 1000
 
 # get the least price value
 def get_minimum_value():
-    for  item in  items:
-     print(item)
-    item_price=int((item.text)[-3::])
-    price_list.append(item_price)
+    for item in items:
+        print(item)
+        item_price=int((item.text)[-3::])
+        price_list.append(item_price)
     print(price_list)
     value = str(min(price_list))
     print(value)
@@ -54,5 +54,6 @@ elif (temp_txt)> (20):
 driver.find_element(By.XPATH,value=cart).click()
 time.sleep(2)
 # Click pay with card button
-driver.find_element(By.XPATH,value = pay).click()
-driver.close()
+print(pay)
+driver.find_element(By.XPATH,value=pay).click()
+
