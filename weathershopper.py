@@ -27,10 +27,11 @@ least_price_item = 1000
 
 # get the least price value
 def get_minimum_value():
-    for  item in  items:
-     print(item)
-    item_price=int((item.text)[-3::])
-    price_list.append(item_price)
+   def get_minimum_value():
+    for item in items:
+        print(item)
+        item_price=int((item.text)[-3::])
+        price_list.append(item_price)
     print(price_list)
     value = str(min(price_list))
     print(value)
