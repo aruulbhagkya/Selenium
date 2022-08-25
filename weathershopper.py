@@ -17,7 +17,7 @@ cart_button=locators.cart_button
 # getting the xpath for pay button
 pay_button=locators.pay_button
 # getting the xpath for price
-price=locators.price_list
+price_text=locators.price_list
 
 temp = driver.find_element(By.XPATH,temperature)
 temp_txt = int((temp.text)[0:2])
@@ -26,7 +26,7 @@ price_list=[]
 least_price_item = 1000
 
 # get the least price value
-   def get_price_list():
+   def click_add_button():
     for item in items:
         print(item)
         item_price=int((item.text)[-3::])
@@ -40,14 +40,14 @@ least_price_item = 1000
 if (temp_txt) < (20) :
     print("Moisturizer products")
     driver.find_element(By.XPATH,moisturizer_button).click()
-    items= driver.find_elements(By.XPATH,price)
-    get_price_list()
+    items= driver.find_elements(By.XPATH,price_text)
+    click_add_button()
 
 elif (temp_txt)> (20): 
     print("Sunscreen products")
     driver.find_element(By.XPATH,sunscreen_button).click()   
-    items= driver.find_elements(By.XPATH,price)
-   get_price_list()
+    items= driver.find_elements(By.XPATH,price_text)
+    click_add_button()
 
 
     
